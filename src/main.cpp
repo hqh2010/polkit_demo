@@ -1,13 +1,3 @@
-/*
- * Copyright (c) 2022. Uniontech Software Ltd. All rights reserved.
- *
- * Author:     huqinghong <huqinghong@uniontech.com>
- *
- * Maintainer: huqinghong <huqinghong@uniontech.com>
- *
- * SPDX-License-Identifier: GPL-3.0-or-later
- */
-
 #include <dbus/dbus.h>
 #include <unistd.h>
 
@@ -21,10 +11,6 @@
 #include <polkitqt1-authority.h>
 using namespace PolkitQt1;
 
-// https://www.jianshu.com/p/aeb7f2f736a2
-// https://github.com/xiayesuifeng/polkit-qt-example
-// https://github.com/KDE/polkit-qt-1/tree/master/examples
-// https://wiki.archlinux.org/title/Polkit_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 bool checkAuthorization(const QString& actionId, qint64 applicationPid)
 {
     Authority::Result result;
