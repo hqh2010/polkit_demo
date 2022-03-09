@@ -28,7 +28,7 @@ rm -rf ./* && cmake .. && make -j
 
 # 参考文档
 
-[https://www.jianshu.com/p/aeb7f2f736a2]()
+https://www.jianshu.com/p/aeb7f2f736a2
 
 [https://github.com/xiayesuifeng/polkit-qt-example]()
 
