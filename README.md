@@ -30,10 +30,10 @@ rm -rf ./* && cmake .. && make -j
 
 https://www.jianshu.com/p/aeb7f2f736a2
 
-[https://github.com/xiayesuifeng/polkit-qt-example]()
+https://github.com/xiayesuifeng/polkit-qt-example
 
-[https://github.com/KDE/polkit-qt-1/tree/master/examples]()
+https://github.com/KDE/polkit-qt-1/tree/master/examples
 
 polkit 官网中文翻译网址
 
-[https://wiki.archlinux.org/title/Polkit_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)]()
+https://wiki.archlinux.org/title/Polkit_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
