@@ -1,0 +1,88 @@
+#pragma once
+
+#include <QDebug>
+#include <QObject>
+#include <QStringList>
+
+class DbusFilter : public QObject
+{
+    Q_OBJECT
+public:
+    // DbusFilter() = default;
+
+private:
+    QStringList nameFilter;
+    QStringList pathFilter;
+    QStringList interfaceFilter;
+
+    /*
+     * 判断是否为符合规则的表达式
+     *
+     * @param expression: 表达式
+     *
+     * @return bool: true: 是 false:否
+     */
+    bool isRegularExpression(const QString &expression);
+
+    /*
+     * 判断输入字符串是否匹配指定规则
+     *
+     * @param src: 输入表达式
+     * @param reg: 正则表达式
+     *
+     * @return bool: true: 是 false:否
+     */
+    bool isMatchRegExp(const QString &src, const QString &reg);
+
+    /*
+     * 判断输入数据是否匹配指定规则列表
+     *
+     * @param data: 输入表达式
+     * @param filterList: 规则列表
+     *
+     * @return bool: true: 是 false:否
+     */
+    bool isMatchFilterList(const QString &data, const QStringList &filterList);
+
+public:
+    /*
+     * 判断dbus消息是否匹配规则列表
+     *
+     * @param name: 消息名称
+     * @param path: 消息路径
+     * @param interface: 消息interface
+     *
+     * @return bool: true: 是 false:否
+     */
+    bool isMessageMatch(const QString &name, const QString &path, const QString &interface);
+
+    bool loadConfig(const QString &configPath);
+
+    /*
+     * 添加消息名称匹配规则
+     *
+     * @param name: 消息名称匹配规则
+     */
+    void addNameFilter(const QString &name);
+
+    /*
+     * 添加消息路径匹配规则
+     *
+     * @param path: 消息路径匹配规则
+     */
+    void addPathFilter(const QString &path);
+
+    /*
+     * 添加消息interface匹配规则
+     *
+     * @param interface: 消息interface匹配规则
+     */
+    void addInterfaceFilter(const QString &interface);
+
+    /*
+     * dump dbus消息过滤规则
+     *
+     * @param config: 输出结果
+     */
+    void dumpConfig(QString &config);
+};
