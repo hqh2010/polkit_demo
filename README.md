@@ -1,4 +1,4 @@
-# 原理
+# 说明
 
 This is a demo for polkit.
 
