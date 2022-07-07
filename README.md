@@ -34,6 +34,8 @@ https://github.com/xiayesuifeng/polkit-qt-example
 
 https://github.com/KDE/polkit-qt-1/tree/master/examples
 
+https://www.anquanke.com/post/id/267774
+
 polkit 官网中文翻译网址
 
 https://wiki.archlinux.org/title/Polkit_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
