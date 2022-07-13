@@ -26,6 +26,18 @@ rm -rf ./* && cmake .. && make -j
 
 ![1646787999166.png](image/README/1646787999166.png)
 
+配置某个特定用户deepin-test执行pkexec时免密，pkexec version 0.105
+
+```bash
+test@test:/var/lib/polkit-1/localauthority/10-vendor.d$ cat deepin-test.pkla 
+[install and uninstall without password]
+Identity=unix-user:deepin-test
+Action=*
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes
+```
+
 # 参考文档
 
 https://www.jianshu.com/p/aeb7f2f736a2
@@ -39,3 +51,5 @@ https://www.anquanke.com/post/id/267774
 polkit 官网中文翻译网址
 
 https://wiki.archlinux.org/title/Polkit_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+
+https://linux.die.net/man/8/pklocalauthority
